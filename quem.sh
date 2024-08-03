@@ -19,7 +19,6 @@ banner
 
 #MATE desktop for Pentesters
 sudo apt -y update && sudo apt -y upgrade
-
 sudo apt install -y open-vm-tools
 sudo apt install -y open-vm-tools-desktop
 sudo cp $SCRIPT_DIR/images/desktop-background.png    /usr/share/images/desktop-base/default
@@ -39,9 +38,9 @@ sudo apt remove -y xterm
 sudo apt purge -y xterm
 sudo apt install -y gnome-terminal
 sudo apt install -y dbus-x11
-xfconf-query -c xsettings -p /Net/ThemeName -s "Adwaita-dark"
-gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
-gsettings set org.gnome.desktop.sound event-sounds false
+sudo xfconf-query -c xsettings -p /Net/ThemeName -s "Adwaita-dark"
+suuo gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
+sudo gsettings set org.gnome.desktop.sound event-sounds false
 
 sudo apt install -y network-manager
 sudo apt install -y network-manager-gnome
@@ -50,7 +49,7 @@ sudo systemctl enable NetworkManager.service
 sudo apt install -y kali-desktop-mate
 sudo apt install -y tor ufw gospider hakrawler gobuster ruby-dev ffuf seclists filezilla
 sudo apt install -y httrack webhttrack sherlock eyewitness sublist3r photon recon-ng python3-venv python3-pip jq pipx 
-sduo apt install -y snapd mediainfo-gui kali-tools-crypto-stego neovim cargo asciinema 
+sudo apt install -y snapd mediainfo-gui kali-tools-crypto-stego neovim cargo asciinema 
 sudo apt install -y marble qgis finalrecon ugrep bloodhound bing-ip2hosts golang libxcb-cursor0 
 sudo apt install -y mat2 gallery-dl libimage-exiftool-perl stegosuite exifprobe ruby-bundler mpg123 
 sudo apt install -y thunderbird sq python3-lxml libre-dev exiflooter flowblade dumpsterdiver 
@@ -60,35 +59,33 @@ sudo apt purge spiderfoot amass theharvester -y
 sudo apt remove libreoffice mate-terminal -y
 sudo apt install snapd -y
 
-systemctl start snapd
-systemctl enable snapd
-systemctl start snapd.apparmor
-systemctl enable snapd.apparmor
+sudo systemctl start snapd
+sudo systemctl enable snapd
+sudo systemctl start snapd.apparmor
+sudo systemctl enable snapd.apparmor
 
-snap install joplin-desktop
-snap install ngrok
-snap install localxpose
-snap install telegram-desktop
+sudo snap install joplin-desktop
+sudo snap install ngrok
+sudo snap install localxpose
+sudo snap install telegram-desktop
 
-gem install mechanize
-gem install colorize
+sudo gem install mechanize
+sudo gem install colorize
 
-
-systemctl enable ufw
+sudo systemctl enable ufw
 sudo apt install ufw
-ufw enable
-ufw allow ssh
-systemctl start postgresql
-systemctl enable postgresql
-systemctl start ssh
-systemctl enable ssh
+sudo ufw enable
+sudo ufw allow ssh
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+sudo systemctl start ssh
+sudo systemctl enable ssh
 
 #Update Metasploit
-msfdb init
-
+sudo msfdb init
 
 sudo apt install -y xinit
 sudo apt install -y xorg 
 sudo apt install -y lightdm
 sudo systemctl enable lightdm
-sudo reboot
+#sudo reboot
