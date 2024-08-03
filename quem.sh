@@ -22,7 +22,9 @@ sudo apt -y update && sudo apt -y upgrade
 
 sudo apt install -y open-vm-tools
 sudo apt install -y open-vm-tools-desktop
-sudo cp $SCRIPT_DIR/images/desktop-background.png /usr/share/images/desktop-base/default
+sudo cp $SCRIPT_DIR/images/desktop-background.png    /usr/share/images/desktop-base/default
+sudo cp $SCRIPT_DIR/images/desktop-grub.png          /usr/share/images/desktop-base/desktop-grub.png
+sudo cp $SCRIPT_DIR/images/kali-ferrofluid-16x9.jpg  /usr/share/backgrounds/kali/kali-ferrofluid-16x9.jpg
 sudo apt install -y git
 sudo apt install -y curl
 sudo apt install -y default-jre
@@ -45,21 +47,20 @@ sudo apt install -y network-manager
 sudo apt install -y network-manager-gnome
 sudo systemctl enable NetworkManager.service
 
-apt install mate-desktop mate-desktop-common mate-desktop-environment -y
-apt install mate-desktop-environment-core mate-desktop-environment-extra -y
-apt install mate-desktop-environment-extras kali-desktop-mate -y
-apt install tor ufw gospider hakrawler gobuster ruby-dev ffuf seclists filezilla -y
-apt install httrack webhttrack sherlock eyewitness sublist3r photon recon-ng python3-venv python3-pip jq pipx -y
-apt install snapd mediainfo-gui kali-tools-crypto-stego neovim cargo asciinema -y
-apt install marble qgis finalrecon ugrep bloodhound bing-ip2hosts golang libxcb-cursor0 -y
-apt install mat2 gallery-dl libimage-exiftool-perl stegosuite exifprobe ruby-bundler mpg123 -y
-apt install thunderbird sq python3-lxml libre-dev exiflooter flowblade dumpsterdiver -y
-apt install tiix npm -y
+sudo apt install -y kali-desktop-mate
+sudo apt install -y tor ufw gospider hakrawler gobuster ruby-dev ffuf seclists filezilla
+sudo apt install -y httrack webhttrack sherlock eyewitness sublist3r photon recon-ng python3-venv python3-pip jq pipx 
+sduo apt install -y snapd mediainfo-gui kali-tools-crypto-stego neovim cargo asciinema 
+sudo apt install -y marble qgis finalrecon ugrep bloodhound bing-ip2hosts golang libxcb-cursor0 
+sudo apt install -y mat2 gallery-dl libimage-exiftool-perl stegosuite exifprobe ruby-bundler mpg123 
+sudo apt install -y thunderbird sq python3-lxml libre-dev exiflooter flowblade dumpsterdiver 
+sudo apt install -y tiix npm 
 
-apt purge spiderfoot amass theharvester -y
-apt autoremove -y
-sudo apt remove libreoffice mate-terminal -y
-sudo apt install snapd -y 
+sudo apt purge spiderfoot amass theharvester 
+sudo apt remove libreoffice mate-terminal 
+sudo apt install snapd 
+sudo apt autoremove 
+
 systemctl start snapd
 systemctl enable snapd
 systemctl start snapd.apparmor
