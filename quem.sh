@@ -92,4 +92,4 @@ sudo apt install -y xinit
 sudo apt install -y xorg 
 sudo apt install -y lightdm
 sudo systemctl enable lightdm
-#sudo reboot
+sudo reboot
