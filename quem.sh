@@ -60,7 +60,7 @@ sudo apt install -y thunderbird sq python3-lxml libre-dev exiflooter flowblade d
 sudo apt install -y tilix npm 
 
 sudo apt purge spiderfoot amass theharvester -y 
-sudo apt remove libreoffice mate-terminal -y
+sudo apt remove libreoffice -y
 sudo apt install snapd -y
 
 sudo systemctl start snapd
