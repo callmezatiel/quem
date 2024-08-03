@@ -21,9 +21,9 @@ banner
 sudo apt -y update && sudo apt -y upgrade
 sudo apt install -y open-vm-tools
 sudo apt install -y open-vm-tools-desktop
-sudo cp $SCRIPT_DIR/images/desktop-background.png    /usr/share/images/desktop-base/default
-sudo cp $SCRIPT_DIR/images/desktop-grub.png          /usr/share/images/desktop-base/desktop-grub.png
-sudo cp $SCRIPT_DIR/images/kali-ferrofluid-16x9.jpg  /usr/share/backgrounds/kali/kali-ferrofluid-16x9.jpg
+sudo cp $SCRIPT_DIR images/desktop-background.png    /usr/share/images/desktop-base/default
+sudo cp $SCRIPT_DIR images/desktop-grub.png          /usr/share/images/desktop-base/desktop-grub.png
+sudo cp $SCRIPT_DIR images/kali-ferrofluid-16x9.jpg  /usr/share/backgrounds/kali/kali-ferrofluid-16x9.jpg
 sudo apt install -y git
 sudo apt install -y curl
 sudo apt install -y default-jre
@@ -45,6 +45,10 @@ sudo gsettings set org.gnome.desktop.sound event-sounds false
 sudo apt install -y network-manager
 sudo apt install -y network-manager-gnome
 sudo systemctl enable NetworkManager.service
+
+sudo apt install -y git
+git clone https://github.com/zayronxio/Elementary-KDE-Icons
+sudo mv $SCRIPT_DIR Elementary-KDE-Icons /usr/share/icons
 
 sudo apt install -y kali-desktop-mate
 sudo apt install -y tor ufw gospider hakrawler gobuster ruby-dev ffuf seclists filezilla
