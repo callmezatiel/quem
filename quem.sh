@@ -54,12 +54,11 @@ sduo apt install -y snapd mediainfo-gui kali-tools-crypto-stego neovim cargo asc
 sudo apt install -y marble qgis finalrecon ugrep bloodhound bing-ip2hosts golang libxcb-cursor0 
 sudo apt install -y mat2 gallery-dl libimage-exiftool-perl stegosuite exifprobe ruby-bundler mpg123 
 sudo apt install -y thunderbird sq python3-lxml libre-dev exiflooter flowblade dumpsterdiver 
-sudo apt install -y tiix npm 
+sudo apt install -y tilix npm 
 
-sudo apt purge spiderfoot amass theharvester 
-sudo apt remove libreoffice mate-terminal 
-sudo apt install snapd 
-sudo apt autoremove 
+sudo apt purge spiderfoot amass theharvester -y 
+sudo apt remove libreoffice mate-terminal -y
+sudo apt install snapd -y
 
 systemctl start snapd
 systemctl enable snapd
@@ -92,4 +91,4 @@ sudo apt install -y xinit
 sudo apt install -y xorg 
 sudo apt install -y lightdm
 sudo systemctl enable lightdm
-#reboot
+sudo reboot
